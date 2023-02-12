@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ dats.name }}
+{% endblock %}
+
+{% block body %}
+    <p5>{{ dats.name }}</p5>
+    <p6>Официальная гарантия Apple на 1 год</p6>
+    <p7>Доступно в рассрочку. Доступно в Trade-in</p7>
+    <div class="picture">
+        <img src="{{ url_for('static', filename='img/apple.png') }}" width="18" height="22">
+    </div>
+    <p8>Цвет</p8>
+    <div class="d-grid gap-2 d-md-block">
+        <div class="btn1">
+            <button type="button" class="btn btn-outline-warning "><a href="/9" style="text-decoration: none; color: black">Фиолетовый</a></button>
+        </div>
+        <div class="btn2">
+            <button type="button" class="btn btn-outline-warning"><a href="/4" style="text-decoration: none; color: black">Серебристый</a></button>
+        </div>
+        <div class="btn3">
+            <button type="button" class="btn btn-outline-warning"><a href="/3" style="text-decoration: none; color: black">Золотой</a></button>
+        </div>
+        <div class="btn4">
+            <button type="button" class="btn btn-outline-warning"><a href="/1" style="text-decoration: none; color: black">Черный</a></button>
+        </div>
+    </div>
+
+    <p9>Связь</p9>
+
+<div class="d-grid gap-2 d-md-block">
+        <div class="btn5">
+            <button type="button" class="btn btn-outline-warning "><a href="/9" style="text-decoration: none; color: black">eSIM</a></button>
+        </div>
+        <div class="btn6">
+            <button type="button" class="btn btn-outline-warning"><a href="/4" style="text-decoration: none; color: black">SIM + eSIM</a></button>
+        </div>
+        <div class="btn7">
+            <button type="button" class="btn btn-outline-warning"><a href="/3" style="text-decoration: none; color: black">dual SIM</a></button>
+        </div>
+        </div>
+    <img src="{{ url_for('static', filename=dats.image) }}" width="450" height="450"
+         style="margin-left: 345px; margin-top: 40px">
+    <button class="carousel-control-prev" type="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+    </button>
+    </div>
+    </div>
+    <p10>{{ dats.price }} ₽</p10>
+    <a href="" class="shine-button">Приобрести</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+{% endblock %}
